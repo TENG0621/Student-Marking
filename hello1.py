@@ -65,20 +65,34 @@ while True:
 
 #for the deleting of the student info 
 while True: 
-    for x in b:
-        print (x)
-        
-    delete_student = int(input("Please Choose the number of student that you wish to delete : "))
+    for x in b: #making it like vertical list 
+        print(x)
 
-    if student_number >= delete_student:
-        index = delete_student - 1
-        b.pop(index)
-        continue
-    else:
-        print("Invalid")
-        print (student_number)
-        print(delete_student)
-        break
+    delete_student = int(input("\nPlease Choose the number of student that you wish to delete : "))
+    while True:
+        if student_number >= delete_student:
+            index = delete_student - 1
+            b.pop(index) 
+#             for y in b:
+#                 student_name = y
+            
+            # x = len(b)
+            # if delete_student < x:
+            #     student_number[b] = student_number[b] - 1
+            break
+
+        else:
+            delete_student = int(input("Invalid number. Please enter again : "))
+            continue
+    
+    q = input("\nDo you want to delete another student information ? [y/n] : ")
+    if q == "y":
+        print(x)
+        delete_student = int(input("Please Choose the number of student that you wish to delete : "))
+
+    elif q == "n":
+        print("Thank you")
+        break 
 
 
 
